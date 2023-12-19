@@ -1,19 +1,12 @@
-from operator import getitem
-from sympy import N
 import torch
-from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 import torch.optim as optim
-import torch.nn as nn
-import torch.nn.functional as F
-from torchsummary import summary
-import matplotlib.pyplot as plt
 import argparse
 
 from data.dataset import mnist
 from config import DefaultConfig
 from models import Net
-from utils import *
+from utils import show_info, show_loss
 from train import train
 from test import test
 

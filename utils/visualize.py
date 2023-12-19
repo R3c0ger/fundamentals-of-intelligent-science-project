@@ -1,10 +1,11 @@
-from torch.utils.data import DataLoader
+import os
 
 import matplotlib.pyplot as plt
-import os
+from torch.utils.data import DataLoader
 
 from config import DefaultConfig
 from data import mnist
+
 
 def show_info():
     opt = DefaultConfig()
@@ -45,6 +46,7 @@ def show_info():
         plt.yticks([])                              # 设置y轴刻度
     plt.savefig(img_path + '/test_set_example.png') # 保存图片
     plt.show()
+
 
 def show_loss(train_losses, train_counter, test_losses, test_counter, 
               no_test=True, figheight=5, figwidth=15):
